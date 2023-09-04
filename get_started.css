@@ -1,0 +1,83 @@
+html, body {
+    overflow: hidden; /* Hide scrollbars */
+    height: 100%; /* Set the height of the page to the viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+#id4{
+    background-color: rgb(4, 4, 74);
+    padding: 10;
+    text-align: center;
+
+}
+.nav-link{
+    text-decoration: none; /* Remove the default underline */
+    font-size: large;
+    margin: 0 50px; 
+    padding: 10px 20px; /* Adjust padding to your preference */
+    border-radius: 5px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+.nav-link:hover {
+    background-color: rgb(119, 207, 119); /* Change to your preferred hover color */
+    color: #ffffff; /* Change to your preferred hover text color */
+}
+#id9{
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    width: 40cm;
+    height: 18.5cm;
+    margin-bottom: 100cm;
+}
+.button {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: #dde5ee; /* Blue background color */
+    color: #0a0808; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Style for the buttons on hover */
+.button:hover {
+    background-color: #8497ea; /* Change to your preferred hover color */
+}
+.button2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    font-size: 18px;
+    background-color: #edf0f3; /* Blue background color */
+    color: #0a0808; /* White text color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Style for the buttons on hover */
+.button2:hover {
+    background-color: #8497ea; /* Change to your preferred hover color */
+}
+#id7{
+    display: flex;
+    
+}
+#id0{
+    font-size: xx-large;
+    font-style:inherit;
+}
+#id2{
+    width: 5cm;
+}

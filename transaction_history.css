@@ -1,0 +1,32 @@
+table {
+    margin: 0 auto;
+    width: 80%; /* Adjust the width as needed */
+    border-collapse: collapse; /* Merge table borders */
+}
+
+/* Style the table headers */
+table th {
+    background-color:black; /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+}
+/* Style the table rows */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
+/* Style the table cells */
+table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}

@@ -1,0 +1,47 @@
+#id7{
+    display: flex;
+    
+}
+#id0{
+    font-size: xx-large;
+    font-style:inherit;
+}
+#id2{
+    width: 5cm;
+}
+#id4{
+    background-color: rgb(4, 4, 74);
+    padding: 10;
+    text-align: center;
+
+}
+.nav-link{
+    text-decoration: none; /* Remove the default underline */
+    font-size: large;
+    margin: 0 50px; 
+    padding: 10px 10px; /* Adjust padding to your preference */
+    border-radius: 5px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+.nav-link:hover {
+    background-color: rgb(119, 207, 119); /* Change to your preferred hover color */
+    color: #ffffff; /* Change to your preferred hover text color */
+}
+#id9{
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    width: 40cm;
+    height: 18.5cm;
+    margin-bottom: 100cm;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+

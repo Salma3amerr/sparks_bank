@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Money Transfer</title>
+    <script src="money_transfers.js"></script>
+</head>
+<style>
+hr {
+  height: 10px;
+  border: none;
+  position: relative;
+  background: #eaeaea;
+}
+
+hr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 100px solid#504a7c;
+  border-bottom: 10px solid transparent;
+  transform: rotate(-45deg);
+}
+
+hr::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 100px solid #504a7c;
+  border-bottom: 10px solid transparent;
+  transform: rotate(45deg);
+}
+#id4{
+    background-color: rgb(4, 4, 74);
+    padding: 0.5cm;
+    text-align: center;
+
+}
+.nav-link{
+    text-decoration: none; /* Remove the default underline */
+    font-size: large;
+    margin: 0 50px; 
+    padding: 10px 20px; /* Adjust padding to your preference */
+    border-radius: 5px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+.nav-link:hover {
+    background-color: rgb(119, 207, 119); /* Change to your preferred hover color */
+    color: #ffffff; /* Change to your preferred hover text color */
+}
+#id0{
+    font-size: xx-large;
+    font-style:inherit;
+}
+
+body{
+    background-color: #ccc;
+}
+#id7{
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100px; /* Adjust as needed to center vertically in the viewport */
+}
+table {
+    margin: 0 auto;
+    width: 80%; /* Adjust the width as needed */
+    border-collapse: collapse; /* Merge table borders */
+}
+
+/* Style the table headers */
+table th {
+    background-color: #6172e4; /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+}
+#id99{
+    display: flex;
+    
+}
+#id0{
+    font-size: xx-large;
+    font-style:inherit;
+}
+#id2{
+    width: 5cm;
+}
+
+/* Style the table rows */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
+/* Style the table cells */
+table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+}
+#id0{
+    font-size: xx-large;
+    font-style:inherit;
+}
+#id2{
+    width: 5cm;
+}
+#id4{
+    background-color: rgb(4, 4, 74);
+    padding: 10;
+    text-align: center;
+
+}
+.nav-link{
+    text-decoration: none; /* Remove the default underline */
+    font-size: large;
+    margin: 0 60px; 
+    padding: 10px 10px; /* Adjust padding to your preference */
+    border-radius: 5px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+.nav-link:hover {
+    background-color: rgb(119, 207, 119); /* Change to your preferred hover color */
+    color: #ffffff; /* Change to your preferred hover text color */
+}
+button {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  padding: 1.00rem 1.00rem;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background-color :  #FFFFFF;
+   color:  #4945bf;
+  border:2px solid #4c37a3;
+  transition: 0.2s ease ;
+}
+button:hover{
+  border-radius:2rem;
+}
+
+#id9{
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    width: 40cm;
+    height: 18.5cm;
+    margin-bottom: 100cm;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+
+</style>
+<body>
+    <div id="id4">
+        <a href="#Home" class="nav-link" ><strong>Home</strong></a>
+        <a href="#About" class="nav-link"><strong>About</strong></a>
+        <a href="#contactus" class="nav-link"><strong>Contact Us</strong></a>
+    </div>
+    
+    <form method="POST" action="/transfer" onsubmit="transferMoney(); return false;" >
+    </div>
+    
+    <div>
+        <h2>Customers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="data-container">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <hr>
+    <br>
+    <p><strong style="font-size: x-large;">Money Transfer</strong></p>
+    <div id="id7">
+        <p>Sender: </p>&emsp13;<br>
+        <select name="SenderName" placeholder="Choose sender">
+            <option value="Osama">Osama</option>
+            <option value="Ahmed" selected>Ahmed</option>
+            <option value="Omar">Omar</option>
+            <option value="Sama">Sama</option>
+            <option value="Salma">Salma</option>
+            <option value="Karim">Karim</option>
+            <option value="Mohamed">Mohamed</option>
+            <option value="Youssef">Youssef</option>
+            <option value="Abdelrahman">Abdelrahman</option>
+            <option value="Khaled">Khaled</option>
+            <option value="Momen">Momen</option>
+            <option value="Amr">Amr</option>
+        </select>        
+        &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+        <p>Receiver: </p>&emsp13;<br>
+        <select name="RecipientName" placeholder="Choose recipient">
+            <option value="Osama">Osama</option>
+            <option value="Ahmed" selected>Ahmed</option>
+            <option value="Omar">Omar</option>
+            <option value="Sama">Sama</option>
+            <option value="Salma">Salma</option>
+            <option value="Karim">Karim</option>
+            <option value="Mohamed">Mohamed</option>
+            <option value="Youssef">Youssef</option>
+            <option value="Abdelrahman">Abdelrahman</option>
+            <option value="Khaled">Khaled</option>
+            <option value="Momen">Momen</option>
+            <option value="Amr">Amr</option>
+        </select>        
+        &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+        <p>Amount: </p>&emsp13;<br>
+        <input type="number" name="balance" placeholder="Enter Amount You need to Transfer">
+        <br><br>
+        </div>  
+        <button type="submit">Transfer</button>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dataContainer = document.getElementById('data-container');
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/getData'); // Route to fetch data from the server
+    
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const data = JSON.parse(xhr.responseText);
+    
+                    data.forEach((row) => {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td>${row.name}</td>
+                            <td>${row.email}</td>
+                            <td>${row.balance}</td>
+                        `;
+                        dataContainer.appendChild(newRow);
+                    });
+                }
+            };
+    
+            xhr.send();
+        });
+    
+        // Function to handle form submission
+        // Update the transferMoney function in your HTML file
+        // Update the transferMoney function in your HTML file
+function transferMoney() {
+    const senderName = document.querySelector('select[name="SenderName"]').value.toLowerCase();
+    const recipientName = document.querySelector('select[name="RecipientName"]').value.toLowerCase();
+    const amount = parseFloat(document.querySelector('input[name="balance"]').value);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/transfer');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            alert(response.message); // Show an alert with the success message
+        } else {
+            const errorResponse = JSON.parse(xhr.responseText);
+            alert(errorResponse.error); // Show an alert with the error message
+        }
+    };
+
+    xhr.send(`SenderName=${senderName}&RecipientName=${recipientName}&balance=${amount}`);
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transaction History</title>
+    <script src="money_transfers.js"></script>
+    <link rel="stylesheet" href="transaction_history.css">
+</head>
+<style>
+#id4{
+    background-color: rgb(4, 4, 74);
+    padding: 0.5cm;
+    text-align: center;
+
+}
+.nav-link{
+    text-decoration: none; /* Remove the default underline */
+    font-size: large;
+    margin: 0 50px; 
+    padding: 10px 20px; /* Adjust padding to your preference */
+    border-radius: 5px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+.nav-link:hover {
+    background-color: rgb(119, 207, 119); /* Change to your preferred hover color */
+    color: #ffffff; /* Change to your preferred hover text color */
+}
+
+    table {
+    margin: 0 auto;
+    width: 80%; /* Adjust the width as needed */
+    border-collapse: collapse; /* Merge table borders */
+}
+
+/* Style the table headers */
+table th {
+    background-color:rgb(72, 99, 187); /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+}
+/* Style the table rows */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row color */
+}
+/* Style the table cells */
+table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc; /* Add a border */
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+</style>
+<body>
+    <div id="id4">
+        <a href="#Home" class="nav-link" ><strong>Home</strong></a>
+        <a href="#About" class="nav-link"><strong>About</strong></a>
+        <a href="#contactus" class="nav-link"><strong>Contact Us</strong></a>
+    </div>
+    <div>
+        <h2>Transaction History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction id</th>
+                    <th>Sender</th>
+                    <th>Receiver</th>
+                    <th>Amount</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-history-container">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const transactionHistoryContainer = document.getElementById('transaction-history-container');
+
+            // Fetch data from the server
+            fetch('/transaction_history') // Make sure the route matches the correct endpoint
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then((data) => {
+                    // Process and display data on the HTML page
+                    data.forEach((transaction) => {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td>${transaction.transaction_id}</td>
+                            <td>${transaction.sender}</td>
+                            <td>${transaction.receiver}</td>
+                            <td>${transaction.amount}</td>
+                            <td>${transaction.timestamp}</td>
+                        `;
+                        transactionHistoryContainer.appendChild(newRow);
+                    });
+                })
+                .catch((error) => {
+                    console.error('Fetch error:', error);
+                });
+        });
+
+    </script>
+</body>
+</html>

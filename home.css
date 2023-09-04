@@ -1,0 +1,146 @@
+hr {
+    height: 10px;
+    border: none;
+    position: relative;
+    background: #eaeaea;
+  }
+#id0{
+    font-size: xx-large;
+    font-style:inherit;
+}
+#id2{
+    width: 5cm;
+}
+#id7{
+    display: flex;
+    
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+}
+#id56{
+    width: 40cm;
+    height: 18.5cm;
+    margin-bottom: 100cm;
+    position: absolute;
+    top: 175px;
+    left: 1px;
+    z-index: 1;
+    border-radius: 10cm;
+    
+}
+
+#id4{
+    background-color: rgb(4, 4, 74);
+    padding: 10;
+    text-align: center;
+
+}
+.nav-link{
+    text-decoration: none; /* Remove the default underline */
+    font-size: large;
+    margin: 0 50px; 
+    padding: 10px 20px; /* Adjust padding to your preference */
+    border-radius: 5px; /* Add rounded corners */
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition */
+}
+.nav-link:hover {
+    background-color: rgb(119, 207, 119); /* Change to your preferred hover color */
+    color: #ffffff; /* Change to your preferred hover text color */
+}
+#id9{
+    width: 520px;
+    float: right;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 280px;
+    left: 25cm;
+    z-index: 2;
+    
+}
+#id3{
+    display: inline;
+    background-color:  rgb(4, 4, 74);
+    color:white;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin-left: 12cm;
+    border-radius: 5px;
+    
+}
+.button-wrapper {
+    padding: 6cm;
+    text-align:center;
+    display:inline-block; 
+    margin:10px;
+    position: absolute;
+    top: 200px;
+    right: 15cm;
+    z-index: 3;
+    transition: 0.2s ease ;
+    
+}
+#id67{
+    background-color: rgb(4, 4, 74);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: large;
+    transition: 0.2s ease ;
+}
+#About{
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(4, 4, 74);
+    border: radius 30px;
+    z-index: 4;
+}
+#id99{
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    display: inline-block;
+    font-size: x-large;
+    text-align:justify;
+}
+#id100{
+    padding: 5px;
+    display: inline-block;
+    font-size: x-large;
+    white-space:pre;
+    margin-left: 40px;
+    ;
+}
+#contactus{
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(4, 4, 74);
+    
+}
+
+footer {
+    mix-blend-mode: screen;
+    /*background-color: #4f574e; /* Background color for the footer */
+    color: #0b0b0b; /* Text color */
+    text-align: center;
+    padding: 10px 0; /* Adjust padding to your preference */
+    font-size: large;
+}
+
+
+
+
+
+
+
